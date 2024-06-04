@@ -1,0 +1,1 @@
+[![npm latest][2]][3] [![node compatibility][13]][14] [![Github Actions][4]][5]
