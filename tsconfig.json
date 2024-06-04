@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./",
+        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "removeComments": false,
+        "emitDecoratorMetadata": true,
+        "resolveJsonModule": true,
+        "lib": [
+            "es2015",
+            "ESNext"
+        ],
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "baseUrl": "./",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*.ts",
+        "test/**/*.ts",
+        "./*.json",
+        "jest.config.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
