@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 16 # 指定 Node.js 的版本
+
+# 使用缓存来提高安装依赖的速度
+cache:
+  directories:
+    - "node_modules"
+
+# 安装阶段，安装项目依赖
+install:
+  - npm install
+
+# 构建阶段，编译 TypeScript
+script:
+  - npm run build
+
+# 可选：运行测试
+ - npm test
