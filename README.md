@@ -1,5 +1,8 @@
 # TypeScript有限状态机
 
+![npm (tag)](https://img.shields.io/npm/v/@seyan/ts-statemachine/latest)
+![NPM License](https://img.shields.io/npm/l/%40seyan%2Fts-statemachine)
+
 使用TypeScript装饰器实现的有限状态机
 
 ## 安装
@@ -11,7 +14,14 @@ npm install @seyan/ts-statemachine
  ## 使用示例
  
 ```typescript
-import { AFSM, Event, Status, StateMachine, EventHandlerResponse, StatusType } from '@seyan/ts-statemachine';
+import {
+  AFSM,
+  Event,
+  Status,
+  StateMachine,
+  EventHandlerResponse,
+  StatusType
+} from '@seyan/ts-statemachine';
 
 @StateMachine()
 class FSM extends AFSM {
