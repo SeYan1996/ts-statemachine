@@ -11,7 +11,7 @@ npm install @seyan/ts-statemachine
  ## 使用示例
  
 ```typescript
-import { AFSM, Event, Status, StateMachine, EventHandlerResponse, StatusType } from 'ts-statemachine';
+import { AFSM, Event, Status, StateMachine, EventHandlerResponse, StatusType } from '@seyan/ts-statemachine';
 
 @StateMachine()
 class FSM extends AFSM {

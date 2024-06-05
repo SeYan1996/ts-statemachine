@@ -1,5 +1,5 @@
 {
-  "name": "ts-statemachine",
+  "name": "@seyan/ts-statemachine",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -41,6 +41,6 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://npm.tools.vipshop.com/repository/npm-releases/"
+    "registry": "https://registry.npmjs.org/"
   }
 }
