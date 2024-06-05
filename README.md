@@ -115,4 +115,13 @@ class TestStm extends AFSM {
     return s;
   }
 }
+
+(async function test() {
+  const fsm = new TestStm();
+  fsm.setState("s1");
+  await fsm.handleEvent("e1"); // currentState => s2
+  await fsm.handleEvent("e2"); // currentState => s3
+  await fsm.handleEvent("noChange"); // currentState => s3
+  await fsm.handleEvent("unregisteredEvent") // Promise.reject(UnregisteredEventError("触发未注册事件"))
+})()
 ```
