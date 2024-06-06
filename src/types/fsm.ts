@@ -28,4 +28,4 @@ export type EventHandlerResponse = void | {
 /**
  * 事件处理函数 不设置返回值则不改变状态
  */
-export type EventHandler = (...args: any[]) => EventHandlerResponse;
+export type EventHandler = (...args: any[]) => Promise<EventHandlerResponse>;
