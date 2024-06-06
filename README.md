@@ -37,7 +37,7 @@ class TestStm extends AFSM {
   // 在s1状态下触发e1事件
   @Status("s1")
   @Event("e1")
-  private async s1_e1(): EventHandlerResponse {
+  private async s1_e1(): Promise<EventHandlerResponse> {
     // 业务逻辑处理
     // ...
     // 转换为s2状态
@@ -47,7 +47,7 @@ class TestStm extends AFSM {
   // 在s1状态下触发e2事件
   @Status("s1")
   @Event("e2")
-  private async s1_e2(): EventHandlerResponse {
+  private async s1_e2(): Promise<EventHandlerResponse> {
     // 业务逻辑处理
     // ...
     // 转换为s3状态
@@ -57,7 +57,7 @@ class TestStm extends AFSM {
 // 在s2状态下触发e1事件
   @Status("s2")
   @Event("e1")
-  private async s2_e1(): EventHandlerResponse {
+  private async s2_e1(): Promise<EventHandlerResponse> {
     // 业务逻辑处理
     // ...
     // 转换为s1状态
@@ -67,7 +67,7 @@ class TestStm extends AFSM {
   // 在s2状态下触发e2事件
   @Status("s2")
   @Event("e2")
-  private async s2_e2(): EventHandlerResponse {
+  private async s2_e2(): Promise<EventHandlerResponse> {
     // 业务逻辑处理
     // ...
     // 转换为s3状态
@@ -77,7 +77,7 @@ class TestStm extends AFSM {
   // 在s3状态下触发e1事件
   @Status("s3")
   @Event("e1")
-  private async s3_e1(): EventHandlerResponse {
+  private async s3_e1(): Promise<EventHandlerResponse> {
     // 业务逻辑处理
     // ...
     // 转换为s1状态
@@ -86,14 +86,14 @@ class TestStm extends AFSM {
 
   @Status("s3")
   @Event("e2")
-  private async s3_e2(): EventHandlerResponse {
+  private async s3_e2(): Promise<EventHandlerResponse> {
     return { next: "s2" };
   }
 
   // 状态工厂可以支持状态列表 在s1 s2 s3状态下触发setState处理逻辑相同
   @Status(["s1", "s2", "s3"])
   @Event("setState")
-  private async setState(state: StatusType): EventHandlerResponse {
+  private async setState(state: StatusType): Promise<EventHandlerResponse> {
     return { next: state };
   }
 
